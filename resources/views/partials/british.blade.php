@@ -2,7 +2,7 @@
 
 
 
-@section('title', 'Even Movies')
+@section('title', 'British Movies')
 
 
 @section('main')
