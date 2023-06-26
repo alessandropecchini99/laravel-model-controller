@@ -2,16 +2,14 @@
 
 
 
-@section('title', 'Movies')
+@section('title', 'Even Movies')
 
 
 @section('main')
 
-    <div class="row row-cols-2 movies-container">
+    <div class="row british-container">
 
-        @foreach($movies as $i => $movie)     
-
-            <div class="col">
+        @foreach($british as $i => $movie)     
                 <div class="card">
                     <div class="card-body text-center">
                         <h5 class="card-title">{{ $movie->title }}</h5>
@@ -28,11 +26,6 @@
                         </p>
                     </div>
                 </div>
-                <br>
-            </div>
-
         @endforeach
-
-    </div>
 
 @endsection

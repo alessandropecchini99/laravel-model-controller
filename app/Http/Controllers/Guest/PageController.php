@@ -12,13 +12,28 @@ class PageController extends Controller
 
     public function index()
     {
-        return view('welcome');
+        // richiedo i dati dal db
+        $count = Movie::where('id', '>=', 0)->count();
+        return view('welcome', [
+            "count" => $count,
+        ]);
     }
 
     public function movie()
     {
         // richiedo i dati dal db
         $movies = Movie::all();
-        return view('partials.movie', compact('movies'));
+        return view('partials.movie', [
+            "movies" => $movies,
+        ]);
+    }
+
+    public function british_movie()
+    {
+        // richiedo i dati dal db
+        $british_movies = Movie::where('nationality', 'american/british')->get();
+        return view('partials.british', [
+            "british" => $british_movies,
+        ]);
     }
 }

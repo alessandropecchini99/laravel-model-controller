@@ -17,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PageController::class, 'index']);
 
 Route::get('/movies', [PageController::class, 'movie'])->name('movies');
+
+Route::get('/british', [PageController::class, 'british_movie'])->name('british');
